@@ -24,15 +24,23 @@ public class PlayerMovement : MonoBehaviour{
 
     }
 
-    private void ForwardMovement(){
-        if(Input.GetKey("w")){
+    private void ForwardMovement()
+    {
+        if(Input.GetKey("w"))
+        {
             anim.SetBool("Walking", true);
-            if (Input.GetKey(KeyCode.LeftShift)){
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+               
                 anim.SetBool("Running", true);
-            } else{
+            } 
+            else
+            {
                 anim.SetBool("Running", false);
             }
-        } else if (Input.GetKeyUp("w")) {
+        }
+        else if (Input.GetKeyUp("w")) 
+        {
             anim.SetBool("Walking", false);
             anim.SetBool("Running", false);
         }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour 
@@ -7,7 +8,7 @@ public class GameManager : MonoBehaviour
     public int currentPickups = 0;
     public int maxPickups = 4;
     public bool levelComplete = false;
-    public Text pickupText;
+    public TMP_Text pickupText;
 
     void Update()
     {
