@@ -4,14 +4,13 @@ public class Pickup : MonoBehaviour
 {
     GameManager gameManager;
 
-
     private void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
     private void OnTriggerEnter(Collider otherObject)
     {
-        if(otherObject.transform.tag == "Player")
+        if (otherObject.transform.tag == "Player")
         {
             gameManager.currentPickups += 1;
             Destroy(this.gameObject);
