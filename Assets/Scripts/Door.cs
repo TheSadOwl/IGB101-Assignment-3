@@ -4,49 +4,25 @@ public class Door : MonoBehaviour
 {
     Animator DoorAnim;
 
-    public bool Opened;
-
-    [Header("Door Cooldown")]
-    public float cooldownTime = 1f;
-
-    private bool canInteract = true;
-
-    public AudioSource OpenSound;
-
-    public AudioSource CloseSound;
-
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         DoorAnim = GetComponent<Animator>();
     }
 
-    public void OpenDoor()
+    // Update is called once per frame
+    void Update()
     {
-        if (!canInteract)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            return;
+            if (DoorAnim.GetBool("Open"))
+            {
+                DoorAnim.SetBool("Open", false);
+            }
+            else
+            {
+                DoorAnim.SetBool("Open", true);
+            }
         }
-
-        canInteract = false;
-
-        Opened = !Opened;
-
-        DoorAnim.SetBool("Open", Opened);
-
-        Invoke(nameof(ResetCooldown), cooldownTime);
-    }
-
-    private void ResetCooldown()
-    {
-        canInteract = true;
-    }
-
-    public void OpenDoorSound()
-    {
-        OpenSound.Play();
-    }
-    public void CloseDoorSound()
-    {
-        CloseSound.Play();
     }
 }
