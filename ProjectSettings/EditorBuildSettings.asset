@@ -8,5 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ProBuilderTest.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/hugh_scene.unity
+    guid: 0437cce864e7653469fc030acde36fb1
+  - enabled: 1
+    path: Assets/Scenes/Dominick's Scene.unity
+    guid: c12952cc51dff0243b8d852355f58173
+  - enabled: 1
+    path: Assets/Scenes/Vinh's Scene.unity
+    guid: c0e631c7c4856094fa1d5c9f7e80e1aa
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
